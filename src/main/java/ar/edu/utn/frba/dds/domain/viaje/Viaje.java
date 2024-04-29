@@ -38,7 +38,7 @@ public class Viaje {
 
     public Float evaluarDemora(Float demoraEnSeccion){
     if(demoraEnSeccion > tiempoDemora){
-        usuario.getReaccionIncidente().reaccionar();
+        usuario.getReaccionIncidente().reaccionar(this);
         return demoraEnSeccion;
     }
 
