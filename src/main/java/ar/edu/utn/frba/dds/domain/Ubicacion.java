@@ -1,15 +1,11 @@
 package ar.edu.utn.frba.dds.domain;
 
 public class Ubicacion {
-    private String calle;
-    private String numero;
-    private String piso;
-    private String departamento;
+    private String latitud;
+    private String longitud;
 
-    public Ubicacion(String calle, String numero, String piso, String departamento) {
-        this.calle = calle;
-        this.numero = numero;
-        this.piso = piso;
-        this.departamento = departamento;
+    public Ubicacion(String longitud, String latitud) {
+        this.latitud = latitud;
+        this.longitud = longitud;
     }
 }

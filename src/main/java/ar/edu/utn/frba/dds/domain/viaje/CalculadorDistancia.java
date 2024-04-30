@@ -7,5 +7,6 @@ import java.util.List;
 public interface CalculadorDistancia {
 
     public float distanciaEntreDosPuntos(Ubicacion partida, Ubicacion destino);
+
     public float obtenerDistanciaEntreSecciones(List<Ubicacion> destinos);
 }

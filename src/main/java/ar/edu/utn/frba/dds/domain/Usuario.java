@@ -12,17 +12,14 @@ public class Usuario {
     private int edad;
     private String sexo;
     private Reaccion reaccionIncidente;
+    private Boolean activo = false;
 
     public void setReaccionIncidente(Reaccion reaccionIncidente) {
         this.reaccionIncidente = reaccionIncidente;
     }
-
     public Reaccion getReaccionIncidente() {
         return reaccionIncidente;
     }
-
-    private Boolean activo = false;
-    private Boolean notificaciones = true;
 
     public Usuario(String nombre, String apellido, Ubicacion ubicacion, int edad, String sexo, Reaccion reaccionIncidente) {
         this.nombre = nombre;
@@ -33,9 +30,5 @@ public class Usuario {
         this.reaccionIncidente = reaccionIncidente;
     }
 
-    public void comenzarViaje(Viaje viaje, List<Usuario> cuidadores) {
-        viaje.aniadirCuidadores(cuidadores);
-
-    }
-
+    public void comenzarViaje(Viaje viaje) {}
 }

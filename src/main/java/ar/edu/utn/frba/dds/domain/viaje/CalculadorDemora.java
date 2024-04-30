@@ -6,7 +6,5 @@ import java.util.List;
 
 public interface CalculadorDemora {
 
-    public List<Float> obtenerDemoraEntreSecciones(List<Float> distancias);
-
     public Double tiempoEnRecorrer(Float distancia);
 }
