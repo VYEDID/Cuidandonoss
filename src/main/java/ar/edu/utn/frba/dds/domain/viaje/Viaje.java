@@ -14,42 +14,29 @@ public class Viaje {
     private Ubicacion direccionActual;
     private List<Ubicacion> destinos;
     private List<Usuario> cuidadoresPropuestos;
-    private Integer demoraAproxEnMins;
+    private Double demoraAproxEnMins;
     private Integer tiempoDeInicio;
     private List<Usuario> cuidadoresElegidos;
     private Integer tiempoDemora;
     private Boolean avisoSalud;
 
-    public void calcularDemoraAproximada (CalculadorDistancia calculadorDistancia, CalculadorDemora calculadorDemora){
-        float distanciaTotalEnMetros = (obtenerDistanciaEntreSecciones(calculadorDistancia)).stream().mapToDouble().sum();
-        float demoraTotal = 0;
-        List<Float> demoraEntreSecciones ;
+    public void calcularDemoraAproximada (CalculadorDistancia cDist, CalculadorDemora cDem){
 
-        if(avisoSalud) {
-            demoraTotal =
-        } else {
-            demoraEntreSecciones = obtenerDemoraEntreSecciones(calculadorDemora);
-            demoraTotal = demoraEntreSecciones.stream().map(this::evaluarDemora).sum();
-        }
+        List<Ubicacion> origenYDestinos = destinos;
+        origenYDestinos.add(0,direccionActual);
+
+        this.demoraAproxEnMins = cDem.tiempoEnRecorrer(cDist.obtenerDistanciaEntreSecciones(origenYDestinos));
     }
 
-    private List<Float> obtenerDemoraEntreSecciones(CalculadorDemora calculadorDemora) {
-    }
+    public void evaluarDemora(){
 
-    public Float evaluarDemora(Float demoraEnSeccion){
-    if(demoraEnSeccion > tiempoDemora){
-        usuario.getReaccionIncidente().reaccionar(this);
-        return demoraEnSeccion;
-    }
+    // Si la demora total es mayor al tiempo de demora de demora aprox en minutos calculado, se reacciona
+        // La otra condicion es que si el tiempo que tarda en una seccion es mayor al esperado, se reacciona
 
-    // Si no cumple esta condicion, evaluar la demora
+
     }
 
     public void aniadirCuidadores(List<Usuario> cuidadores){
-
-    }
-
-    public List<Float> obtenerDistanciaEntreSecciones(CalculadorDistancia caluladorDstancia){
 
     }
 
