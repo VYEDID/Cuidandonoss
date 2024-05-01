@@ -4,7 +4,11 @@ import ar.edu.utn.frba.dds.domain.Ubicacion;
 
 import java.util.List;
 
-public interface CalculadorDemora {
+public class CalculadorDemora {
 
-    public Double tiempoEnRecorrer(Float distancia);
+    public Double tiempoEnRecorrer(Float distancia){
+        // Sin implementar
+        double x = 0;
+        return x;
+    }
 }

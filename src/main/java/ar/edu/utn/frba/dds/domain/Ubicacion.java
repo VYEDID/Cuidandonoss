@@ -1,10 +1,10 @@
 package ar.edu.utn.frba.dds.domain;
 
 public class Ubicacion {
-    private String latitud;
-    private String longitud;
+    private float latitud;
+    private float longitud;
 
-    public Ubicacion(String longitud, String latitud) {
+    public Ubicacion(float longitud, float latitud) {
         this.latitud = latitud;
         this.longitud = longitud;
     }
